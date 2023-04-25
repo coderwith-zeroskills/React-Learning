@@ -1,0 +1,34 @@
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous-btn{
+    flex:2;
+    margin-top:5%;
+    background-color: antiquewhite;
+    margin-top:5%;
+    width:80px;
+}
+.container{
+    flex:6;
+    background-color: antiquewhite;
+    max-width:50%;
+  margin-left:25%;
+  margin-top:5%;
+  min-height: 300px;
+    margin-left: 25%;
+  
+}
+.next-btn{
+    flex:2;
+    margin-top:2.5%;
+    background-color: antiquewhite;
+    width:80px;
+    margin-bottom:5%;
+    margin-left: 90%;
+}
+
+

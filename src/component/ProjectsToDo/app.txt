@@ -1,0 +1,51 @@
+// import logo from "./logo.svg";
+import { useState } from "react";
+import "./App.css";
+// import Welcome from './component/welcome';
+// import Greet from './component/Greet';
+// import MyApp from "./component/FunctionalComponent/Counter";
+// import MyApp from "./component/FunctionalComponent/CounterUpdatingTogether";
+// import ClickToReveal from "./component/FunctionalComponent/ClickToReveal";
+// import ListAndKeys from "./component/FunctionalComponent/ListAndKeys";
+// import PreviousStateCounter from "./component/FunctionalComponent/PreviousStateCounter";
+// import Form from "./component/FunctionalComponent/Form";
+// import UseStateObject from "./component/Concept/UseStateObject";
+// import ValidationForm from "./component/FunctionalComponent/ValidationForm";
+// import UseEffectOnce from "./component/FunctionalComponent/UseEffectOnce";
+// import DataFetching from "./component/DataFetching/DataFetching";
+// import DataFetching2 from "./component/DataFetching/DataFetching2";
+// import UseStateObject from "./component/FunctionalComponent/UseStateObject";
+import ToDoForm from "./component/ProjectsToDo/ToDoForm";
+import ToDoList from "./component/ProjectsToDo/ToDoList";
+function App() {
+  // const arr = [
+  //   {
+  //     note: "",
+  //     noteId: undefined,
+  //   },
+
+  const [noteArray, setNoteArray] = useState([]);
+  const enteredNoteHandler = (parameter) => {
+    setNoteArray((prevState) => [...prevState, parameter]);
+  };
+  const deleteHandler = (idDelete) => {
+    setNoteArray(noteArray.filter((v) => v.noteId != idDelete));
+  };
+  return (
+    <div>
+      <ToDoForm enteredNote={enteredNoteHandler} />
+      {noteArray.map((val) => {
+        return (
+          <ToDoList
+            key={val.noteId}
+            note={val.note}
+            id={val.noteId}
+            ondelete={deleteHandler}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+export default App;
