@@ -1,19 +1,28 @@
 // if react then import redux from 'redux'
 // but its a js so
 const redux = require("redux");
+const combinedStore = redux.combineReducers;
 const createStore = redux.createStore;
 
-const reducerInitialState = { cake: 10 };
-const actionObject = {};
-function actionFunction() {
-  return {
-    type: "eating",
-    abcd: "a",
-  };
-}
-const reducer = (state = reducerInitialState, action) => {
+const cakeInitialState = { cake: 10 };
+const iceCreamInitialState = { iceCream: 10 };
+
+// const actionObject = {};
+// function cakeAction() {
+//   return {
+//     type: "eating",
+//     abcd: "a",
+//   };
+// }
+// function iceCreamAction() {
+//   return {
+//     type: "eating",
+//     abcd: "a",
+//   };
+// }
+const cakeReducer = (state = cakeInitialState, action) => {
   switch (action.type) {
-    case "eating":
+    case "eatingCake":
       return {
         ...state,
         cake: state.cake - 1,
@@ -24,16 +33,26 @@ const reducer = (state = reducerInitialState, action) => {
     }
   }
 };
-const store = createStore(reducer);
-console.log("current", store.getState());
-const unsuscribe = store.subscribe(() => console.log(store.getState())); //updated state
-console.log("redux");
-store.dispatch({ type: "eating" }); //inside provide action type
-console.log("current", store.getState());
-store.dispatch({ type: "eating" }); //inside provide action type
-console.log("current", store.getState());
-store.dispatch({ type: "eating" }); //inside provide action type
-console.log("current", store.getState());
+const iceCreamReducer = (state = iceCreamInitialState, action) => {
+  switch (action.type) {
+    case "eatingIce":
+      return {
+        ...state,
+        iceCream: state.iceCream - 1,
+      };
 
-// unsuscribe();
-// unsuscribe();
+    default: {
+      return state;
+    }
+  }
+};
+//accepts key-value pair
+const storeCombined = combinedStore({
+  cake: cakeReducer,
+  iceCream: iceCreamReducer,
+});
+const store = createStore(storeCombined);
+console.log(store.getState());
+// store.dispatch({ type: "eating" });
+store.dispatch({ type: "eatingCake" });
+console.log(store.getState());
