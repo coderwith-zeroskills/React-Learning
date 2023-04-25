@@ -40,6 +40,7 @@ import UseReducer from "./component/Concept/useReducer";
 import UseTransition from "./component/Concept/UseTransition";
 import Main from "./component/Concept/Routing/Main";
 import MainSearchApiRoute from "./component/ProjectSortApi/MainSearchApiRoute";
+// import { Form } from "react-router-dom";
 // import FormBoiler from "./component/Formik/FormBoiler";
 // import FormikComponent from "./component/Formik/FormikComponent";
 // import New from "./component/New";
@@ -56,7 +57,7 @@ function App() {
       {/* <FormikComponent /> */}
       {/* <MainSortApi /> */}
       {/* <MainSearchApi /> */}
-      <MainSearchApiRoute />
+      {/* <MainSearchApiRoute /> */}
       {/* <UseReducer /> */}
       {/* <UseTransition /> */}
       {/* <Main /> */}
