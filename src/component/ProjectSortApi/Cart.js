@@ -10,8 +10,8 @@ function Cart({ cartCount, addedList }) {
   const clickHandler = (name) => {
     setFlag(!flag);
     console.log(name);
-
-    let a = addedList.filter((p) => name !== p.name);
+    let a;
+    a = addedList.filter((p) => name !== p.name);
     addedList = [...a];
   };
   const print = addedList.map((v, i) => {
