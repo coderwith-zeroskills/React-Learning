@@ -41,13 +41,16 @@ import UseTransition from "./component/Concept/UseTransition";
 import Main from "./component/Concept/Routing/Main";
 import MainSearchApiRoute from "./component/ProjectSortApi/MainSearchApiRoute";
 // import { Form } from "react-router-dom";
-// import FormBoiler from "./component/Formik/FormBoiler";
-// import FormikComponent from "./component/Formik/FormikComponent";
+import FormBoiler from "./component/Formik/FormBoiler";
+import FormikComponent from "./component/Formik/FormikComponent";
+import CakeContainer from "./component/REDUX/CakeContainer";
 // import New from "./component/New";
+import { Provider } from "react-redux";
+import { store } from "./ReduxC/Cake/Store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       {/* <MainBmi /> */}
       {/* <Form /> */}
       {/* <ToDoForm /> */}
@@ -61,7 +64,8 @@ function App() {
       {/* <UseReducer /> */}
       {/* <UseTransition /> */}
       {/* <Main /> */}
-    </>
+      <CakeContainer />
+    </Provider>
   );
 }
 

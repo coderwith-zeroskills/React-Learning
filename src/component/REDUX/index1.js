@@ -7,6 +7,13 @@
 // we will need logger so will import it :createLogger method
 const redux = require("redux");
 const reduxLogger = require("redux-logger");
+//untill now synchorous action like cake actin called immedialtely state is updated now async
+// state{
+//     loading:true,
+//     data:[];
+//     error:'error';
+// }
+// action:{}
 
 const combinedStore = redux.combineReducers;
 const createStore = redux.createStore;
