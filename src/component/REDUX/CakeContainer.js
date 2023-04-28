@@ -4,7 +4,7 @@
 // inside cake folder another file named" reducer"
 //inside "cake" create one more file name "store.js" and this store needs to be provided to react component where react-redux comes to picture,we wrap our component with <Provider> by importing provider from react-redux
 //actually do that in App.js wrapping all component with provider hence all can access them
-import { Provider } from "react-redux";
+
 import React from "react";
 import { actionCakeEating } from "../../ReduxC/Cake/cakeaction";
 import { connect } from "react-redux";

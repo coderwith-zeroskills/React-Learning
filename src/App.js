@@ -50,7 +50,8 @@ import { store } from "./ReduxC/Cake/Store";
 
 function App() {
   return (
-    <Provider store={store}>
+    <>
+      {" "}
       {/* <MainBmi /> */}
       {/* <Form /> */}
       {/* <ToDoForm /> */}
@@ -64,8 +65,10 @@ function App() {
       {/* <UseReducer /> */}
       {/* <UseTransition /> */}
       {/* <Main /> */}
-      <CakeContainer />
-    </Provider>
+      {/* <Provider store={store}>
+        <CakeContainer />
+      </Provider> */}
+    </>
   );
 }
 
