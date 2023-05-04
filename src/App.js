@@ -56,6 +56,7 @@ import MuiCard from "./MaterialUI/MuiCard";
 import MuiAccordion from "./MaterialUI/MuiAccordion";
 import MuiResponsive from "./MaterialUI/MuiResponsive";
 import MuiCustomizing from "./MaterialUI/MuiCustomizing";
+import AllComponent from "./MaterialUI/Project/AllComponent";
 
 function App() {
   return (
@@ -85,7 +86,9 @@ function App() {
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
       {/* <MuiResponsive /> */}
-      <MuiCustomizing />
+      {/* <MuiCustomizing />
+       */}
+      <AllComponent />
     </>
   );
 }
