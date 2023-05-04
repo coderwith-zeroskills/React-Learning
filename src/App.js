@@ -47,6 +47,15 @@ import CakeContainer from "./component/REDUX/CakeContainer";
 // import New from "./component/New";
 import { Provider } from "react-redux";
 import { store } from "./ReduxC/Cake/Store";
+import BPlaceholder from "./BootStrap/BPlaceholder";
+import BProgressBar from "./BootStrap/BProgressBar";
+import BTable from "./BootStrap/BTable";
+import BTabs from "./BootStrap/BTabs";
+import MuiBox from "./MaterialUI/Box";
+import MuiCard from "./MaterialUI/MuiCard";
+import MuiAccordion from "./MaterialUI/MuiAccordion";
+import MuiResponsive from "./MaterialUI/MuiResponsive";
+import MuiCustomizing from "./MaterialUI/MuiCustomizing";
 
 function App() {
   return (
@@ -68,6 +77,15 @@ function App() {
       {/* <Provider store={store}>
         <CakeContainer />
       </Provider> */}
+      {/* <BPlaceholder /> */}
+      {/* <BProgressBar /> */}
+      {/* <BTable /> */}
+      {/* <BTabs /> */}
+      {/* <MuiBox /> */}
+      {/* <MuiCard /> */}
+      {/* <MuiAccordion /> */}
+      {/* <MuiResponsive /> */}
+      <MuiCustomizing />
     </>
   );
 }

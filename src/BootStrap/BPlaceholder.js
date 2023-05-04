@@ -1,3 +1,4 @@
+import { ProgressBar } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Placeholder from "react-bootstrap/Placeholder";
@@ -16,7 +17,6 @@ function CardExample() {
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>
-
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
@@ -30,6 +30,7 @@ function CardExample() {
           <Placeholder.Button variant="primary" xs={6} />
         </Card.Body>
       </Card>
+      <br></br>;
     </div>
   );
 }
